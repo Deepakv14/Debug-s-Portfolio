@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "title":"IIT (BHU) Varanasi",
+        "date":"2020-2024",
+        "desc":"8.94 CPI, BTech in Chemical Engineering, Member of Students' Parliament 2021-22, Writer/Director Masquerades [The Dramatics Society of IIT BHU], The Photography Club, The Outreach Club, The Media Club"
+    },
+    {
+        "id":2,
+        "title":"St. Antony's Inter College,Lucknow",
+        "date":"2018-2019",
+        "desc":"98.25%, Intermediate, Class 12, Computer Science, PCM, English"
+    },
+    {
+        "id":3,
+        "title":"St. Antony's Inter College,Lucknow",
+        "date":"2016-2017",
+        "desc":"96.6%, HighSchool, Class 10, Computer Science, PCBM, English"
+    }
+]
