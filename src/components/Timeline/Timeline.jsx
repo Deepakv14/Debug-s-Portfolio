@@ -57,7 +57,7 @@ const Timeline = () => {
     };
 
     return (
-        <div className=' timeline flex flex-col items-center justify-center p-4 mt-4 w-full max-w-screen-xl bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200'>
+        <div className=' timeline flex flex-col items-center justify-center p-4 w-full max-w-screen-xl bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200'>
             <div class="timeline-container">
                 <h1 className='project-name text-3xl  text-[#32012F] font-bold font-serif'>Debug's Timeline</h1>
                 <div id="timeline">
