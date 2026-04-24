@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center p-4 h-auto w-full max-w-screen-xl bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200'>
+    <div className='flex flex-col items-center w-full justify-center'>
          <h1 className='text-3xl  text-[#32012F] font-bold font-serif'>Let's Connect</h1>   
             <div className='p-4'>
                <div className='flex flex-row flex-wrap items-center justify-center'>

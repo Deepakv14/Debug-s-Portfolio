@@ -6,7 +6,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import Timeline from './components/Timeline/Timeline.jsx'
-
+import Resume from './components/Resume.jsx'
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Route path='/about' element={<Timeline/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/skills' element={<Skills/>}/>
+        <Route path='/resume' element={<Resume/>}/>
       </Routes>
       <Footer/>
     </Router>
