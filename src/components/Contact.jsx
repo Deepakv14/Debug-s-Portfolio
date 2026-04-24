@@ -1,14 +1,15 @@
-import React,{ useState } from 'react'
-import emailjs from '@emailjs/browser'
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const Contact = () => {
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
+
   const sendEmail = (e) => {
-    e.persist();
     e.preventDefault();
     setIsSubmitting(true);
+
     emailjs
       .sendForm(
         "service_yewd573",
@@ -17,79 +18,101 @@ const Contact = () => {
         "j0Ylr0OgEdeeLPtfE"
       )
       .then(
-        (result) => {
-          setStateMessage('Message sent!');
+        () => {
+          setStateMessage("✅ Message sent successfully!");
           setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
+          e.target.reset();
         },
-        (error) => {
-          console.log(error);
-          setStateMessage('Something went wrong, please try again later');
+        () => {
+          setStateMessage("❌ Something went wrong. Try again.");
           setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
         }
       );
-    
-    // Clears the form after sending the email
-    e.target.reset();
+
+    setTimeout(() => setStateMessage(null), 4000);
   };
 
   return (
-    <div className='flex flex-col items-center w-full justify-center'>
-         <h1 className='text-3xl  text-[#32012F] font-bold font-serif'>Let's Connect</h1>   
-            <div className='p-4'>
-               <div className='flex flex-row flex-wrap items-center justify-center'>
-                      <form onSubmit={sendEmail} className='flex flex-col bg-white gap-6 w-72 p-4 m-4'>
-                      
-                        <div class="relative h-11 w-full min-w-[200px]">
-                            <input placeholder="Name" name="name" id="user_name"
-                              class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-[#32012F] outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
-                            <label for="name"
-                              class="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#32012F] italic peer-focus:after:scale-x-100 peer-focus:after:border-[#32012F] peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                              Name
-                            </label>
-                        </div>
-                        
-                        <div class="relative h-11 w-full min-w-[200px]">
-                            <input placeholder="Email" name='email'
-                              class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-[#32012F] outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
-                            <label for="email"
-                              class="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#32012F] italic peer-focus:after:scale-x-100 peer-focus:after:border-[#32012F] peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                              Email
-                            </label>
-                        </div>
+    <div className="m-2 px-6 text-center justify-center items-center">
 
-                        <div class="relative h-11 w-full min-w-[200px]">
-                            <input placeholder="Subject"
-                              class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-[#32012F] outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
-                            <label
-                              class="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#32012F] italic peer-focus:after:scale-x-100 peer-focus:after:border-[#32012F] peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                              Subject
-                            </label>
-                        </div>
+      {/* Title */}
+      <h1 className="text-4xl font-bold text-center font-serif text-[#32012F]">
+        Let's Connect
+      </h1>
+      <p className="text-gray-500 mt-2 text-[10px] md:text-sm lg:text-sm font-extralight italic">
+        Get in touch with me
+      </p>
 
-                        <div class="relative h-11 w-full min-w-[200px]">
-                            <textarea placeholder="Message"  name="message" 
-                              class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-[#32012F] outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
-                            <label for="message"
-                              class="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#32012F] italic peer-focus:after:scale-x-100 peer-focus:after:border-[#32012F] peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                              Message
-                            </label>
-                        </div>
-                        
-                        <input type="Submit" text="Submit" disabled={isSubmitting} className='text-white bg-[#32012F] rounded-sm min-w-full p-2 hover:bg-[#581553]'/>
-                        {stateMessage && <p>{stateMessage}</p>}
-                      </form>
-               </div>
+      {/* Form Card */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="mt-2 w-full max-w-lg mx-auto bg-white p-6 rounded-xs shadow-lg border border-purple-100"
+      >
+        <form onSubmit={sendEmail} className="flex flex-col gap-5">
 
-            </div>
+          {/* Name */}
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            className="w-full p-3  text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 focus:outline-none focus:border-[#32012F] transition"
+          />
+
+          {/* Email */}
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            className="w-full p-3 text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 focus:outline-none focus:border-[#32012F] transition"
+          />
+
+          {/* Subject */}
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            className="w-full p-3 text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 focus:outline-none focus:border-[#32012F] transition"
+          />
+
+          {/* Message */}
+          <textarea
+            name="message"
+            placeholder="Type your message here..."
+            rows={4}
+            required
+            className="w-full p-3 text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 focus:outline-none focus:border-[#32012F] transition resize-none"
+          />
+
+          {/* Button */}
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="
+              bg-[#32012F] 
+              text-white 
+              p-3 
+              rounded-xs 
+              hover:bg-[#581553] 
+              transition 
+              font-medium
+            "
+          >
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </button>
+
+          {/* Status Message */}
+          {stateMessage && (
+            <p className="text-sm text-center text-gray-600">
+              {stateMessage}
+            </p>
+          )}
+        </form>
+      </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
-
+export default Contact;

@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Skills from './components/Skills';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
-import Timeline from './components/Timeline/Timeline.jsx'
+import Timeline from './components/Timeline.jsx'
 import Resume from './components/Resume.jsx'
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<Timeline/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/skills' element={<Skills/>}/>
         <Route path='/resume' element={<Resume/>}/>
+        <Route path='/skills' element={<Skills/>}/>
+        <Route path='/contact' element={<Contact/>}/>
       </Routes>
       <Footer/>
     </Router>

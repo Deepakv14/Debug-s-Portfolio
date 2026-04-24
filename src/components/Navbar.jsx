@@ -35,9 +35,9 @@ const Navbar = () => {
   const navItems = [
     { action: gotoHome, text: 'HOME'   },
     { action: gotoAbout, text: 'ABOUT' },
+    { action: gotoResume, text: 'RESUME' },
     { action: gotoSkills, text: 'SKILLS' },
     { action: gotoContact, text: 'CONTACT' },
-    { action: gotoResume, text: 'RESUME' },
   ];
 
   return (
