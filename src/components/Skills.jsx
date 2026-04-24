@@ -63,13 +63,13 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="py-10 px-6 text-center">
+    <div className="m-2 text-center">
 
       {/* Title */}
       <h1 className="text-4xl font-bold text-center font-serif text-[#32012F]">
         Skills
       </h1>
-      <p className="text-gray-500 mt-2 font-extralight italic">
+      <p className="text-gray-500 mt-2 text-[10px] md:text-sm lg:text-sm font-extralight italic">
         Technologies I work with
       </p>
 
@@ -93,7 +93,12 @@ const Skills = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="flex flex-row justify-center items-center"
+              className="
+flex flex-wrap 
+justify-center 
+items-center 
+gap-4
+"
             >
               {section.items.map((skill, idx) => (
 

@@ -1,53 +1,49 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Button } from "react-bootstrap";
-// import pdf from '../assets/';
-import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/TextLayer.css";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+import React from "react";
 
 const Resume = () => {
-  const resumeLink =
-    "https://raw.githubusercontent.com/github-name/pdf-renderer/main/src/assets/resume.pdf";
-
-  // https://drive.google.com/file/d/1obFH65it46k4tA8YrRKfhpSbcBm4fymx/view?usp=sharing
-
-  const pdf = "https://drive.google.com/file/d/1Y6M7YSX5v9yyv8JlUxgiJDYxCk--CI44/edit"
-
-  const [width, setWidth] = useState(1200);
-
-  useEffect(() => {
-    // default width is 1200px, but this hook sets the width of the resume to be the inner width of whatever screen the user is using
-    setWidth(window.innerWidth);
-  }, []);
+  const pdf = "/Resume.pdf";
 
   return (
-    <Container fluid className="resume-section">
-      <Button
-        variant="primary"
-        href={pdf}
-        target="_blank"
-        style={{ maxWidth: "250px" }}
-      >
-        &nbsp;Download Resume
-      </Button>
-      <Row className="resume">
+    <div className="m-2 text-center">
 
-        <Document file={resumeLink} className="d-flex justify-content-center">
+      {/* Title */}
+      <h1 className="text-4xl font-bold text-center font-serif text-[#32012F]">
+        Resume
+      </h1>
 
-          <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-        </Document>
-      </Row>
-      <iframe
-        src={pdf}
-        title="Resume"
-        width="100%"
-        height="800px"
-        allow="autoplay"
-      />
-    </Container>
+      {/* Buttons */}
+      <div className="flex justify-center gap-4 mt-2">
+
+        <a
+          href={pdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 bg-[#32012F] text-white rounded-lg shadow hover:bg-[#32012F]/80 transition"
+        >
+          View Resume
+        </a>
+
+        <a
+          href={pdf}
+          download
+          className="px-5 py-2 border border-[#32012F] text-[#32012F] rounded-lg hover:bg-[#32012F]/10 transition"
+        >
+          Download
+        </a>
+
+      </div>
+
+      {/* PDF Preview */}
+      <div className="mt-2 flex justify-center">
+        <iframe
+          src={pdf}
+          title="Resume"
+          className="w-full max-w-4xl h-[600px] md:h-[800px] rounded-xs shadow-lg border"
+        />
+      </div>
+
+    </div>
   );
-}
+};
 
 export default Resume;

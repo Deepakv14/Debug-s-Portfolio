@@ -27,7 +27,7 @@ const timelineData = [
         icon: "🎓",
     },
     {
-        title: "St. Antony's Inter College,Lucknow",
+        title: "St. Antony's Inter College",
         role: "Intermediate",
         tech: "Score: 98.25%",
         date: "2018 - 2019 [Lucknow, Uttar Pradesh, India]",
@@ -35,7 +35,7 @@ const timelineData = [
         icon: "🎓",
     },
     {
-        title: "St. Antony's Inter College,Lucknow",
+        title: "St. Antony's Inter College",
         role: "High School",
         tech: "Score: 96.6%",
         date: "2016 - 2017 [Lucknow, Uttar Pradesh, India]",
@@ -52,7 +52,7 @@ const TimelineItem = ({ item, index }) => {
         <div className="relative flex items-center justify-between">
 
             {/* LEFT */}
-            <div className={`w-1/2 ${isLeft ? "block" : "hidden md:block"}`}>
+            <div className="w-full md:w-1/2">
                 {isLeft && <Card item={item} open={open} setOpen={setOpen} direction="left" />}
             </div>
 
@@ -65,7 +65,7 @@ const TimelineItem = ({ item, index }) => {
             />
 
             {/* RIGHT */}
-            <div className={`w-1/2 ${!isLeft ? "block" : "hidden md:block"}`}>
+            <div className="w-full md:w-1/2">
                 {!isLeft && <Card item={item} open={open} setOpen={setOpen} direction="right" />}
             </div>
         </div>
@@ -82,13 +82,22 @@ const Card = ({ item, direction, open, setOpen }) => {
             viewport={{ once: true }}
             whileHover={{ scale: 1.03 }}
             onClick={() => setOpen(!open)}
-            className="bg-white p-5 m-2 rounded-xl shadow-lg cursor-pointer transition-all"
+            className="
+            bg-white 
+            p-4 sm:p-5 
+            rounded-xl 
+            shadow-lg 
+            w-full 
+            max-w-md 
+            mx-auto 
+            transition-all
+            "
         >
-            <h3 className="text-lg font-medium text-[#32012F]">
+           <h3 className="text-base sm:text-lg font-semibold text-[#32012F] leading-snug">
                 {item.title}
             </h3>
 
-            <p className="text-xs text-gray-500 font-extralight italic">{item.role}</p>
+            <p className="text-xs sm:text-sm text-gray-500 italic">{item.role}</p>
 
             <p className="text-xs text-gray-400 mt-1">{item.date}</p>
 
@@ -97,10 +106,9 @@ const Card = ({ item, direction, open, setOpen }) => {
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="mt-2 text-xs text-gray-600"
+                   className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed"
                 >
                     {item.desc}
-                    <br />
                     <br />
                     <p className="text-xs text-gray-400 mt-1">{item.tech}</p>
                 </motion.p>
@@ -113,7 +121,7 @@ const Card = ({ item, direction, open, setOpen }) => {
 
 const Timeline = () => {
     return (
-        <div className="py-10 px-6 text-center">
+        <div className="m-2 text-center">
 
         {/* Title */}
         <h1 className="text-4xl font-bold text-center font-serif text-[#32012F]">
