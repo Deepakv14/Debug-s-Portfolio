@@ -36,10 +36,10 @@ const Contact = () => {
     <div className="m-2 px-6 text-center justify-center items-center">
 
       {/* Title */}
-      <h1 className="text-4xl font-bold text-center font-serif text-[#32012F]">
+      <h1 className="text-4xl font-bold text-center font-serif text-[#32012F] dark:text-white">
         Let's Connect
       </h1>
-      <p className="text-gray-500 mt-2 text-[10px] md:text-sm lg:text-sm font-extralight italic">
+      <p className="text-gray-500 dark:text-white/60 mt-2 text-[10px] md:text-sm lg:text-sm font-extralight italic">
         Get in touch with me
       </p>
 
@@ -47,7 +47,7 @@ const Contact = () => {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="mt-2 w-full max-w-lg mx-auto bg-white p-6 rounded-xs shadow-lg border border-purple-100"
+        className="mt-2 w-full max-w-lg mx-auto bg-white dark:bg-white/10 p-6 rounded-xs shadow-lg border border-purple-100 dark:border-white/20"
       >
         <form onSubmit={sendEmail} className="flex flex-col gap-5">
 
@@ -57,7 +57,7 @@ const Contact = () => {
             name="name"
             placeholder="Your Name"
             required
-            className="w-full p-3  text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 focus:outline-none focus:border-[#32012F] transition"
+            className="w-full p-3  text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 dark:border-white/30 dark:text-white dark:placeholder-white/50 bg-transparent focus:outline-none focus:border-[#32012F] dark:focus:border-white transition"
           />
 
           {/* Email */}
@@ -66,7 +66,7 @@ const Contact = () => {
             name="email"
             placeholder="Your Email"
             required
-            className="w-full p-3 text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 focus:outline-none focus:border-[#32012F] transition"
+            className="w-full p-3 text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 dark:border-white/30 dark:text-white dark:placeholder-white/50 bg-transparent focus:outline-none focus:border-[#32012F] dark:focus:border-white transition"
           />
 
           {/* Subject */}
@@ -74,7 +74,7 @@ const Contact = () => {
             type="text"
             name="subject"
             placeholder="Subject"
-            className="w-full p-3 text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 focus:outline-none focus:border-[#32012F] transition"
+            className="w-full p-3 text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 dark:border-white/30 dark:text-white dark:placeholder-white/50 bg-transparent focus:outline-none focus:border-[#32012F] dark:focus:border-white transition"
           />
 
           {/* Message */}
@@ -83,7 +83,7 @@ const Contact = () => {
             placeholder="Type your message here..."
             rows={4}
             required
-            className="w-full p-3 text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 focus:outline-none focus:border-[#32012F] transition resize-none"
+            className="w-full p-3 text-xs md:text-sm lg:text-sm rounded-xs border-b-2 border-gray-300 dark:border-white/30 dark:text-white dark:placeholder-white/50 bg-transparent focus:outline-none focus:border-[#32012F] dark:focus:border-white transition resize-none"
           />
 
           {/* Button */}
@@ -91,12 +91,15 @@ const Contact = () => {
             type="submit"
             disabled={isSubmitting}
             className="
-              bg-[#32012F] 
-              text-white 
-              p-3 
-              rounded-xs 
-              hover:bg-[#581553] 
-              transition 
+              bg-[#32012F]
+              text-white
+              dark:bg-white
+              dark:text-[#32012F]
+              p-3
+              rounded-xs
+              hover:bg-[#581553]
+              dark:hover:bg-white/80
+              transition
               font-medium
             "
           >
@@ -105,7 +108,7 @@ const Contact = () => {
 
           {/* Status Message */}
           {stateMessage && (
-            <p className="text-sm text-center text-gray-600">
+            <p className="text-sm text-center text-gray-600 dark:text-white/70">
               {stateMessage}
             </p>
           )}
