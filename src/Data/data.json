@@ -44,8 +44,8 @@
                 "Cordys Integrations",
                 "Pega Integrations"
             ],
-            "date": "Sep 2025 - May 2026 [Chennai, Tamil Nadu, India]",
-            "desc": "Engineered a LLM-powered spreadsheet system with graph-based formula evaluation using dependency tracking, cycle detection, and BFS-based cascade recomputation for efficient update propagation. Built modular subsystems for state management(Undo/ Redo), formatting, copy - paste propagation, and charting(Chart.js), along with ExcelJS - based XLSX and CSV import/export. Built integrations with Salesforce to enable live data pull / push between external platforms and spreadsheet workflows, including real - time sync, record updates, and reusable API - based pipelines. Integrated Stripe payment system using Embedded Checkout with webhook - driven, idempotent backend and BullMQ - based asynchronous processing to ensure reliable, retry - safe transaction handling.",
+            "date": "June 2024 - September 2025 [Gurgaon, Haryana, India]",
+            "desc": "Developed and maintained enterprise-level insurance software solutions, integrating with third-party services and legacy systems. Implemented robust backend services using Java and Spring Boot, ensuring high performance and scalability. Collaborated with cross-functional teams to design and deploy new features, enhancing user experience and operational efficiency.",
             "icon": "💼"
         },
         {
