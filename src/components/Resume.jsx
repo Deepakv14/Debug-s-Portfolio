@@ -1,12 +1,11 @@
 import React from "react";
 
-const bucket = process.env.REACT_APP_AWS_S3_BUCKET;
-const region = process.env.REACT_APP_AWS_S3_REGION;
-const fileName = process.env.REACT_APP_FILE_NAME;
+const bucket = process.env.REACT_APP_AWS_S3_BUCKET || "debugv-resume";
+const region = process.env.REACT_APP_AWS_S3_REGION || "ap-south-1";
+const fileName = process.env.REACT_APP_FILE_NAME || "Deepak_SDE_IIT_Varanasi.pdf";
 
 const Resume = () => {
   const pdf = `https://${bucket}.s3.${region}.amazonaws.com/${fileName}`;
-
   return (
     <div className="m-2 text-center">
 

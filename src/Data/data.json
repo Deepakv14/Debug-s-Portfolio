@@ -31,6 +31,23 @@
             "desc": "Engineered a LLM-powered spreadsheet system with graph-based formula evaluation using dependency tracking, cycle detection, and BFS-based cascade recomputation for efficient update propagation. Built modular subsystems for state management(Undo/ Redo), formatting, copy - paste propagation, and charting(Chart.js), along with ExcelJS - based XLSX and CSV import/export. Built integrations with Salesforce to enable live data pull / push between external platforms and spreadsheet workflows, including real - time sync, record updates, and reusable API - based pipelines. Integrated Stripe payment system using Embedded Checkout with webhook - driven, idempotent backend and BullMQ - based asynchronous processing to ensure reliable, retry - safe transaction handling.",
             "icon": "💼"
         },
+         {
+            "title": "IFFCO Tokio General Insurance Pvt Ltd",
+            "role": "Software Development Engineer",
+            "tech": [
+                "Java",
+                "Spring Boot",
+                "My SQL",
+                "Legacy Systems",
+                "Third-party Web services",
+                "P400 Integrations",
+                "Cordys Integrations",
+                "Pega Integrations"
+            ],
+            "date": "Sep 2025 - May 2026 [Chennai, Tamil Nadu, India]",
+            "desc": "Engineered a LLM-powered spreadsheet system with graph-based formula evaluation using dependency tracking, cycle detection, and BFS-based cascade recomputation for efficient update propagation. Built modular subsystems for state management(Undo/ Redo), formatting, copy - paste propagation, and charting(Chart.js), along with ExcelJS - based XLSX and CSV import/export. Built integrations with Salesforce to enable live data pull / push between external platforms and spreadsheet workflows, including real - time sync, record updates, and reusable API - based pipelines. Integrated Stripe payment system using Embedded Checkout with webhook - driven, idempotent backend and BullMQ - based asynchronous processing to ensure reliable, retry - safe transaction handling.",
+            "icon": "💼"
+        },
         {
             "title": "Indian Institute of Technology, Varanasi",
             "role": "B.Tech Chemical Engineering",
