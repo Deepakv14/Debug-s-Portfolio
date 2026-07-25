@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import data from 'Data/data.json';
 
 const container = {
   hidden: { opacity: 0 },
@@ -17,51 +18,10 @@ const item = {
 };
 
 
-const skills = [
-  {
-    title: "Languages",
-    items: [
-      { name: "Java", icon: "devicon-java-plain-wordmark colored" },
-      { name: "C++", icon: "devicon-cplusplus-plain-wordmark colored" },
-      { name: "Typescript", icon: "devicon-typescript-plain colored" },
-      { name: "Python", icon: "devicon-python-plain colored" },
-      { name: "JavaScript", icon: "devicon-javascript-plain colored" },
-    ],
-  },
-  {
-    title: "Backend",
-    items: [
-      { name: "Spring Boot", icon: "devicon-spring-original-wordmark colored" },
-      { name: "Kafka", icon: "devicon-apachekafka-original-wordmark colored" },
-      { name: "Redis", icon: "devicon-redis-plain-wordmark colored" },
-      { name: "Node.js", icon: "devicon-nodejs-plain-wordmark colored" },
-      { name: "Express", icon: "devicon-express-original-wordmark colored" },
-      { name: "Next.js", icon: "devicon-nextjs-original-wordmark colored" },
-      { name: "Nest.js", icon: "devicon-nestjs-plain-wordmark colored" },
-    ],
-  },
-  {
-    title: "Database",
-    items: [
-      { name: "PostgreSQL", icon: "devicon-postgresql-plain-wordmark colored" },
-      { name: "MongoDB", icon: "devicon-mongodb-plain-wordmark colored" },
-      { name: "MySQL", icon: "devicon-mysql-plain-wordmark colored" },
-    ],
-  },
-  {
-    title: "Frontend",
-    items: [
-      { name: "React", icon: "devicon-react-original-wordmark colored" },
-      { name: "Angular", icon: "devicon-angularjs-plain-wordmark colored" },
-      { name: "HTML", icon: "devicon-html5-plain-wordmark colored" },
-      { name: "CSS", icon: "devicon-css3-plain-wordmark colored" },
-      { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain-wordmark colored" },
-    ],
-  },
-];
-
-
 const Skills = () => {
+
+  const skills = data.skills;
+  
   return (
     <div className="m-2 text-center">
 

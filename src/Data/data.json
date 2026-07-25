@@ -1,0 +1,118 @@
+{
+    "timeline": [
+        {
+            "title": "1DigitalStack",
+            "role": "Senior Software Engineer I",
+            "tech": [
+                "Python",
+                "LangGraph",
+                "FastAPI",
+                "MCP",
+                "Agent Skills",
+                "React",
+                "AWS",
+                "Docker"
+            ],
+            "date": "June 2026 - Present [Gurgaon, Haryana, India]",
+            "desc": "Inside 1der world ...",
+            "icon": "💼"
+        },
+        {
+            "title": "Cenizas Labs Pvt Ltd",
+            "role": "Software Development Engineer",
+            "tech": [
+                "Next.js",
+                "Vercel SDK",
+                "EDA",
+                "RAG",
+                "LLM Powered Agentic Flows"
+            ],
+            "date": "Sep 2025 - May 2026 [Chennai, Tamil Nadu, India]",
+            "desc": "Engineered a LLM-powered spreadsheet system with graph-based formula evaluation using dependency tracking, cycle detection, and BFS-based cascade recomputation for efficient update propagation. Built modular subsystems for state management(Undo/ Redo), formatting, copy - paste propagation, and charting(Chart.js), along with ExcelJS - based XLSX and CSV import/export. Built integrations with Salesforce to enable live data pull / push between external platforms and spreadsheet workflows, including real - time sync, record updates, and reusable API - based pipelines. Integrated Stripe payment system using Embedded Checkout with webhook - driven, idempotent backend and BullMQ - based asynchronous processing to ensure reliable, retry - safe transaction handling.",
+            "icon": "💼"
+        },
+        {
+            "title": "Indian Institute of Technology, Varanasi",
+            "role": "B.Tech Chemical Engineering",
+            "tech": [
+                "CGPA: 8.66"
+            ],
+            "date": "2020 - 2024 [Varanasi, Uttar Pradesh, India]",
+            "desc": "Member of Students' Parliament 2021-22, Writer/Director Masquerades [The Dramatics Society of IIT BHU], The Photography Club, The Outreach Club, The Media Club",
+            "icon": "🎓"
+        },
+        {
+            "title": "St. Antony's Inter College",
+            "role": "Intermediate",
+            "tech": [
+                "Score: 98.25%"
+            ],
+            "date": "2018 - 2019 [Lucknow, Uttar Pradesh, India]",
+            "desc": "Intermediate, Class 12, Computer Science, PCM, English",
+            "icon": "🎓"
+        },
+        {
+            "title": "St. Antony's Inter College",
+            "role": "High School",
+            "tech": [
+                "Score: 96.6%"
+            ],
+            "date": "2016 - 2017 [Lucknow, Uttar Pradesh, India]",
+            "desc": "High School, Class 10, Computer Science, PCBM, English",
+            "icon": "🎓"
+        }
+    ],
+    "skills": [
+        {
+            "title": "Languages",
+            "items": [
+                { "name": "Java", "icon": "devicon-java-plain-wordmark colored" },
+                { "name": "C++", "icon": "devicon-cplusplus-plain colored" },
+                { "name": "TypeScript", "icon": "devicon-typescript-plain colored" },
+                { "name": "Python", "icon": "devicon-python-plain colored" },
+                { "name": "JavaScript", "icon": "devicon-javascript-plain colored" }
+            ]
+        },
+        {
+            "title": "Backend",
+            "items": [
+                { "name": "Spring Boot", "icon": "devicon-spring-original-wordmark colored" },
+                { "name": "FastAPI", "icon": "devicon-fastapi-plain colored" },
+                { "name": "Kafka", "icon": "devicon-apachekafka-original-wordmark colored" },
+                { "name": "Redis", "icon": "devicon-redis-plain-wordmark colored" },
+                { "name": "Node.js", "icon": "devicon-nodejs-plain-wordmark colored" },
+                { "name": "Express", "icon": "devicon-express-original-wordmark colored" },
+                { "name": "Next.js", "icon": "devicon-nextjs-original-wordmark colored" },
+                { "name": "Nest.js", "icon": "devicon-nestjs-original-wordmark colored" }
+            ]
+        },
+        {
+            "title": "AI & LLM",
+            "items": [
+                { "name": "LangChain", "icon": "si-langchain si--color" },
+                { "name": "LangGraph", "icon": "si-langgraph si--color" },
+                { "name": "LangSmith", "icon": "" }
+            ]
+        },
+        {
+            "title": "Database",
+            "items": [
+                { "name": "PostgreSQL", "icon": "devicon-postgresql-plain-wordmark colored" },
+                { "name": "MongoDB", "icon": "devicon-mongodb-plain-wordmark colored" },
+                { "name": "MySQL", "icon": "devicon-mysql-plain-wordmark colored" },
+                { "name": "SQLite", "icon": "devicon-sqlite-plain colored" }
+            ]
+        },
+        {
+            "title": "Frontend",
+            "items": [
+                { "name": "React", "icon": "devicon-react-original-wordmark colored" },
+                { "name": "Angular", "icon": "devicon-angularjs-plain-wordmark colored" },
+                { "name": "HTML", "icon": "devicon-html5-plain-wordmark colored" },
+                { "name": "CSS", "icon": "devicon-css3-plain-wordmark colored" },
+                { "name": "Tailwind CSS", "icon": "devicon-tailwindcss-plain-wordmark colored" },
+                { "name": "Bootstrap", "icon": "devicon-bootstrap-plain colored" }
+            ]
+        }
+    ]
+}
