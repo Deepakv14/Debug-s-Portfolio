@@ -11,15 +11,17 @@ import Resume from './components/Resume.jsx'
 function App() {
   return (
     <Router>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<Timeline/>}/>
-        <Route path='/resume' element={<Resume/>}/>
-        <Route path='/skills' element={<Skills/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-      </Routes>
-      <Footer/>
+      <div className="min-h-screen bg-white dark:bg-[#121212] transition-colors duration-300">
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<Timeline/>}/>
+          <Route path='/resume' element={<Resume/>}/>
+          <Route path='/skills' element={<Skills/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+        </Routes>
+        <Footer/>
+      </div>
     </Router>
   );
 }

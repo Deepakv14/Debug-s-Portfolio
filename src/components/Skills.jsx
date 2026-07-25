@@ -26,10 +26,10 @@ const Skills = () => {
     <div className="m-2 text-center">
 
       {/* Title */}
-      <h1 className="text-4xl font-bold text-center font-serif text-[#32012F]">
+      <h1 className="text-4xl font-bold text-center font-serif text-[#32012F] dark:text-white">
         Skills
       </h1>
-      <p className="text-gray-500 mt-2 text-[10px] md:text-sm lg:text-sm font-extralight italic">
+      <p className="text-gray-500 dark:text-white/60 mt-2 text-[10px] md:text-sm lg:text-sm font-extralight italic">
         Technologies I work with
       </p>
 
@@ -43,6 +43,7 @@ const Skills = () => {
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
+              className="dark:text-white"
             >
               {section.title}
             </motion.h2>
@@ -68,18 +69,18 @@ gap-4
                 >
                   <div className="
                     w-20 h-20  m-2
-                    flex items-center justify-center 
-                    bg-white 
-                    rounded-xl 
-                    shadow-md 
-                    hover:shadow-xl 
-                    hover:-translate-y-1 
+                    flex items-center justify-center
+                    bg-white dark:bg-white/10
+                    rounded-xl
+                    shadow-md
+                    hover:shadow-xl
+                    hover:-translate-y-1
                     transition-all duration-300
                   ">
-                    <i className={`${skill.icon} text-4xl`} />
+                    <i className={`${skill.icon} text-4xl dark:text-white`} />
                   </div>
 
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 dark:text-white/70">
                     {skill.name}
                   </p>
                 </motion.div>

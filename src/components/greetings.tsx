@@ -37,7 +37,7 @@ export const DobotGreeting = () => {
        initial={{ opacity: 0, y: 10 }}
        animate={{ opacity: 1, y: 0 }}
        transition={{ delay: 0.2 }}
-       className="mb-2 text-2xl font-normal tracking-tight text-[#32012F]"
+       className="mb-2 text-2xl font-normal tracking-tight text-[#32012F] dark:text-white"
      >
         Another me!!
        {/* How can I help you today? */}
@@ -48,7 +48,7 @@ export const DobotGreeting = () => {
        initial={{ opacity: 0, y: 10 }}
        animate={{ opacity: 1, y: 0 }}
        exit={{ opacity: 0, y: -10 }}
-       className="text-2xl font-normal text-[#32012F]/50"
+       className="text-2xl font-normal text-[#32012F]/50 dark:text-white/50"
      >
        {greeting}
      </motion.div>

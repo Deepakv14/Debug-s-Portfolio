@@ -13,8 +13,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="flex fixed bottom-0 w-full z-10 items-center justify-center p-4 text-[#32012F] bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-4xl backdrop-saturate-200">
-      <p className="text-[#32012F] font-sans mt-4 text-xs md:text-sm lg:text-sm">Made by Debug Verma :)</p>
+    <div className="flex fixed bottom-0 w-full z-10 items-center justify-center p-4 text-[#32012F] dark:text-white bg-white dark:bg-[#121212] border shadow-md rounded-xl border-white/80 dark:border-white/10 bg-opacity-80 backdrop-blur-4xl backdrop-saturate-200">
+      <p className="text-[#32012F] dark:text-white font-sans mt-4 text-xs md:text-sm lg:text-sm">Made by Debug Verma :)</p>
     </div>
   );
 };
