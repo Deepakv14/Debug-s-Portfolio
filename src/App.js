@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Skills from './components/Skills';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
-import Timeline from './components/Timeline.jsx'
+import Timeline from './components/Timeline'
 import Resume from './components/Resume.jsx'
 
 function App() {
